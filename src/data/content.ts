@@ -1,7 +1,7 @@
 export const profile = {
   name: "Kamran Khan",
   role: "AI Developer",
-  tagline: "LLM & RAG systems, ML/DL, and websites that work for real businesses.",
+  tagline: "LLM & RAG systems, ML/DL, and full-stack products that ship.",
   location: "Islamabad, Pakistan",
   phone: "03255898968",
   email: "kamibhaiofficial01@gmail.com",
@@ -16,19 +16,24 @@ export const profile = {
 
 export const services = [
   {
-    title: "Restaurant websites",
+    title: "AI / ML systems",
     description:
-      "Fast, mobile-first sites with menus, hours, reservations, and a clear path for guests to order or visit.",
+      "End-to-end machine learning and deep learning — data prep, model training, evaluation, and deployment that turns raw data into decisions.",
   },
   {
-    title: "AI assistants",
+    title: "LLM & RAG products",
     description:
-      "Chat and voice helpers that answer FAQs, take simple requests, and keep your team focused on service.",
+      "LangChain, FastAPI, and GROQ pipelines for grounded chat, document Q&A, and agentic workflows wired into real backends.",
   },
   {
-    title: "Ops automation",
+    title: "Websites",
     description:
-      "Review summaries, menu insights, and light workflows that turn guest data into decisions.",
+      "Fast, modern sites that look sharp and convert — clear structure, mobile-first layout, and performance that feels instant.",
+  },
+  {
+    title: "Apps",
+    description:
+      "Full-stack web and product apps — APIs, dashboards, and interfaces that connect your users to AI and business logic.",
   },
 ];
 

@@ -6,28 +6,31 @@ export function Work() {
     <section id="work" className="section-pad">
       <div className="mx-auto max-w-6xl">
         <Reveal>
-          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-copper">
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-saffron-deep">
             Work
           </p>
-          <h2 className="mt-3 max-w-2xl font-display text-[clamp(2rem,4vw,3.25rem)] tracking-[-0.03em] text-ink">
-            Experience shipping AI into real workflows.
+          <h2 className="mt-3 max-w-2xl font-display text-[clamp(2.1rem,4.5vw,3.5rem)] font-bold tracking-[-0.04em] text-ink">
+            Shipping AI into workflows that already exist.
           </h2>
         </Reveal>
 
-        <div className="mt-12 space-y-0">
+        <div className="mt-12">
           {experience.map((job, i) => (
-            <Reveal key={job.company} delay={i * 70}>
-              <article className="grid gap-4 border-t border-line py-8 md:grid-cols-[minmax(0,1.1fr)_minmax(0,1.4fr)] md:gap-10">
+            <Reveal key={job.company} delay={i * 80}>
+              <article className="job-row" data-cursor="hot">
                 <div>
-                  <h3 className="font-display text-2xl tracking-tight text-ink">
+                  <h3 className="font-display text-[clamp(1.5rem,2.8vw,2.1rem)] font-bold tracking-tight text-ink">
                     {job.company}
                   </h3>
                   <p className="mt-1 text-ink-soft">{job.role}</p>
                   <p className="mt-3 text-sm text-muted">
-                    {job.period} · {job.location}
+                    {job.period}
+                    <span className="mx-2 text-line">|</span>
+                    {job.location}
                   </p>
+                  <div className="job-accent" aria-hidden />
                 </div>
-                <ul className="space-y-2 text-ink-soft">
+                <ul className="space-y-2.5 text-ink-soft">
                   {job.points.map((point) => (
                     <li key={point} className="leading-relaxed">
                       {point}
@@ -39,20 +42,28 @@ export function Work() {
           ))}
         </div>
 
-        <Reveal className="mt-16">
-          <h3 className="font-display text-[clamp(1.5rem,3vw,2.1rem)] tracking-tight text-ink">
-            Selected projects
-          </h3>
+        <Reveal className="mt-20">
+          <div className="flex flex-wrap items-end justify-between gap-4 border-t border-line pt-10">
+            <h3 className="font-display text-[clamp(1.6rem,3vw,2.3rem)] font-bold tracking-tight text-ink">
+              Selected projects
+            </h3>
+            <p className="max-w-sm text-sm text-muted">
+              From productivity tools to RAG pipelines — practical builds, not slideware.
+            </p>
+          </div>
         </Reveal>
 
         <div className="mt-8 grid gap-8 md:grid-cols-3">
           {projects.map((project, i) => (
-            <Reveal key={project.title} delay={i * 80}>
-              <article className="flex h-full flex-col border-t border-line pt-5">
-                <h4 className="font-display text-xl tracking-tight text-ink">
+            <Reveal key={project.title} delay={i * 90}>
+              <article className="project-band h-full" data-cursor="hot">
+                <span className="font-display text-xs font-bold tracking-[0.14em] text-teal">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <h4 className="mt-3 font-display text-xl font-bold tracking-tight text-ink">
                   {project.title}
                 </h4>
-                <p className="mt-3 flex-1 leading-relaxed text-ink-soft">
+                <p className="mt-3 leading-relaxed text-ink-soft">
                   {project.description}
                 </p>
                 <p className="mt-5 text-sm text-muted">{project.tags.join(" · ")}</p>

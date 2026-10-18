@@ -6,29 +6,33 @@ export function Services() {
     <section id="services" className="section-pad bg-foam">
       <div className="mx-auto max-w-6xl">
         <Reveal>
-          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-copper">
-            Services
-          </p>
-          <h2 className="mt-3 max-w-2xl font-display text-[clamp(2rem,4vw,3.25rem)] tracking-[-0.03em] text-ink">
-            Digital presence with AI that helps your restaurant run.
-          </h2>
-          <p className="mt-4 max-w-xl text-lg leading-relaxed text-ink-soft">
-            One partner for a modern site and the smart layers on top — assistants,
-            automation, and insights that save staff time.
-          </p>
+          <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-saffron-deep">
+                Services
+              </p>
+              <h2 className="mt-3 font-display text-[clamp(2.1rem,4.5vw,3.5rem)] font-bold tracking-[-0.04em] text-ink">
+                What I build as an AI developer.
+              </h2>
+            </div>
+            <p className="max-w-md text-lg leading-relaxed text-ink-soft lg:justify-self-end">
+              From model pipelines to product surfaces — AI/ML systems, LLM apps,
+              websites, and full-stack tools that people can use on day one.
+            </p>
+          </div>
         </Reveal>
 
-        <div className="mt-14 grid gap-10 md:grid-cols-3">
+        <div className="mt-14">
           {services.map((service, i) => (
-            <Reveal key={service.title} delay={i * 90}>
-              <article className="border-t border-line pt-6">
-                <span className="font-display text-sm text-copper">
+            <Reveal key={service.title} delay={i * 100}>
+              <article className="service-row" data-cursor="hot">
+                <span className="font-display text-sm font-bold tracking-wider text-teal">
                   0{i + 1}
                 </span>
-                <h3 className="mt-3 font-display text-2xl tracking-tight text-ink">
+                <h3 className="font-display text-[clamp(1.6rem,3vw,2.35rem)] font-bold tracking-[-0.03em]">
                   {service.title}
                 </h3>
-                <p className="mt-3 leading-relaxed text-ink-soft">
+                <p className="max-w-md leading-relaxed text-ink-soft">
                   {service.description}
                 </p>
               </article>
